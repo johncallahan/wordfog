@@ -1,4 +1,5 @@
 class FogsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_fog, only: %i[ show edit update destroy ]
 
   # GET /fogs or /fogs.json
