@@ -22,7 +22,6 @@ class FogsController < ApplicationController
   # POST /fogs or /fogs.json
   def create
     @fog = Fog.new(fog_params)
-
     respond_to do |format|
       if @fog.save
         CreatePictureJob.perform_later @fog
@@ -37,6 +36,7 @@ class FogsController < ApplicationController
 
   # PATCH/PUT /fogs/1 or /fogs/1.json
   def update
+    @fog.picture = nil
     respond_to do |format|
       if @fog.update(fog_params)
         CreatePictureJob.perform_later @fog
