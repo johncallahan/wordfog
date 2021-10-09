@@ -13,7 +13,6 @@ class FogsController < ApplicationController
     pngimage = cloud.draw(600,400)
     pngimage.format = "png"
     @pngdata = Base64.encode64(pngimage.to_blob)
-    puts @pngdata
   end
 
   # GET /fogs/new
