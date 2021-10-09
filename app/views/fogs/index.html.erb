@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fogs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Words</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fogs.each do |fog| %>
+      <tr>
+        <td><%= fog.name %></td>
+        <td><%= fog.words %></td>
+        <td><%= link_to 'Show', fog %></td>
+        <td><%= link_to 'Edit', edit_fog_path(fog) %></td>
+        <td><%= link_to 'Destroy', fog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fog', new_fog_path %>

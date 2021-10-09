@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @fog.name %>
+</p>
+
+<p>
+  <strong>Words:</strong>
+  <%= @fog.words %>
+</p>
+
+<%= base64_image @pngdata %>
+
+<%= link_to 'Edit', edit_fog_path(@fog) %> |
+<%= link_to 'Back', fogs_path %>
