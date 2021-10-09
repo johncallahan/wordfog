@@ -8,11 +8,6 @@ class FogsController < ApplicationController
 
   # GET /fogs/1 or /fogs/1.json
   def show
-    words = Hash.new(0).tap { |h| @fog.words.split(" ").each { |w| h[w] += 1 } }
-    cloud = MagicCloud::Cloud.new(words, rotate: :free, scale: :log)
-    pngimage = cloud.draw(600,400)
-    pngimage.format = "png"
-    @pngdata = Base64.encode64(pngimage.to_blob)
   end
 
   # GET /fogs/new
@@ -30,6 +25,7 @@ class FogsController < ApplicationController
 
     respond_to do |format|
       if @fog.save
+        CreatePictureJob.perform_later @fog
         format.html { redirect_to @fog, notice: "Fog was successfully created." }
         format.json { render :show, status: :created, location: @fog }
       else
@@ -43,6 +39,7 @@ class FogsController < ApplicationController
   def update
     respond_to do |format|
       if @fog.update(fog_params)
+        CreatePictureJob.perform_later @fog
         format.html { redirect_to @fog, notice: "Fog was successfully updated." }
         format.json { render :show, status: :ok, location: @fog }
       else

@@ -25,6 +25,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'sidekiq', '~> 6.1.3'
+
 gem 'rmagick', require: false
 gem 'magic_cloud'
 

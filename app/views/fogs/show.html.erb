@@ -10,7 +10,7 @@
   <%= @fog.words %>
 </p>
 
-<%= base64_image @pngdata %>
+<%= base64_image @fog.picture unless @fog.picture.nil? %>
 
 <%= link_to 'Edit', edit_fog_path(@fog) %> |
 <%= link_to 'Back', fogs_path %>
