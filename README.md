@@ -8,10 +8,10 @@ A Ruby-on-Rails application to create and manage word clouds.  Uses the [magic_c
 
 ## Table of Contents
 
-* [Requirements](/#requirements)
-* [Installation](/#installation)
-* [Heroku deployment](#herokudeployment)
-* [Dokku deployment](#dokkudeployment)
+* [Requirements](#requirements)
+* [Installation](#installation)
+* [Heroku deployment](#heroku-deployment)
+* [Dokku deployment](#dokku-deployment)
 * [ToDo](#todo)
 * [License](#license)
 
