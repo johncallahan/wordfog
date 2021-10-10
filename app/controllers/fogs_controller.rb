@@ -1,6 +1,6 @@
 class FogsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_fog, only: %i[ show edit update destroy ]
+  before_action :set_fog, only: %i[ print show edit update destroy ]
 
   # GET /fogs or /fogs.json
   def index
@@ -9,6 +9,11 @@ class FogsController < ApplicationController
 
   # GET /fogs/1 or /fogs/1.json
   def show
+  end
+
+  # GET /fogs/1/print
+  def print
+    send_data(@fog.picture, type: 'image/png', disposition: 'inline')
   end
 
   # GET /fogs/new
