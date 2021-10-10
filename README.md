@@ -68,6 +68,7 @@ On your local client:
 
 ```shell
 % git remote add dokku dokku@yourdokkuhost:wordfog
+% git push dokku main:master
 ```
 
 Back on the dokku server:
