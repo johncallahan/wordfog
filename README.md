@@ -12,6 +12,8 @@ A Ruby-on-Rails application to create and manage word clouds.  Uses the [magic_c
 * [Installation](/#installation)
 * [Heroku deployment](#herokudeployment)
 * [Dokku deployment](#dokkudeployment)
+* [ToDo](#todo)
+* [License](#license)
 
 ## Requirements
 
@@ -77,6 +79,11 @@ Back on the dokku server:
 ```
 
 Navigate to the dokku hosted app in a browser and then login with admin@example.com and password shown during seeding.
+
+## ToDo
+
+* Option on each fog to filter out noise words
+* Options on each fog for magic_cloud parameters
 
 ## License
 
