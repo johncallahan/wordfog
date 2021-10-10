@@ -15,7 +15,7 @@
     <% @fogs.each do |fog| %>
       <tr>
         <td><%= fog.name %></td>
-        <td><%= fog.words %></td>
+        <td><%= truncate fog.words, length: 30, separator: /\w+/ %></td>
         <td><%= link_to 'Show', fog %></td>
         <td><%= link_to 'Edit', edit_fog_path(fog) %></td>
         <td><%= link_to 'Destroy', fog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
