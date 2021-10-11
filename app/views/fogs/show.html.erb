@@ -7,7 +7,7 @@
 
 <p>
   <strong>Words:</strong>
-  <%= @fog.words %>
+  <%= truncate @fog.words, length: 30, separator: /\w+/ %>
 </p>
 
 <%= base64_image @fog.picture unless @fog.picture.nil? %>

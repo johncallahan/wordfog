@@ -88,6 +88,7 @@ Navigate to the dokku hosted app in a browser and then login with admin@example.
 * ~~Add logout link and style (with Bootstrap)~~
 * "Still processing" message on each fog picture that is nil
 * Problems with small input
+* Fix requiring "RMagick" is deprecated. Use "rmagick" instead
 
 ## License
 
