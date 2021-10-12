@@ -308,4 +308,20 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+
+  config.omniauth :openid_connect, {
+                    name: :my_provider,
+                    scope: [:openid, :email],
+                    response_type: :code,
+                    uid_field: "uid",
+                    discovery: true,
+                    client_options: {
+                      port: 443,
+                      scheme: "https",
+                      host: ENV["OIDC_HOST"],
+                      identifier: ENV["OIDC_CLIENT_ID"],
+                      secret: ENV["OIDC_SECRET_KEY"],
+                      redirect_uri: ENV["OIDC_REDIRECT_URL"],
+                    },
+                  }
 end
