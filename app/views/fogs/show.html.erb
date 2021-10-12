@@ -1,16 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="container mt-4 border">
+  <%= render 'shared/message' %>
+  <div class="container-content">
+    <h1 class="m-3">Show Fog</h1>
+    <div class="m-3">
+      <p>
+        <strong>Name:</strong>
+        <%= @fog.name %>
+      </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @fog.name %>
-</p>
+      <p>
+        <strong>Words:</strong>
+        <%= truncate @fog.words, length: 30, separator: /\w+/ %>
+      </p>
 
-<p>
-  <strong>Words:</strong>
-  <%= truncate @fog.words, length: 30, separator: /\w+/ %>
-</p>
+      <%= base64_image @fog.picture unless @fog.picture.nil? %>
 
-<%= base64_image @fog.picture unless @fog.picture.nil? %>
+      <br/><br/>
 
-<%= link_to 'Edit', edit_fog_path(@fog) %> |
-<%= link_to 'Back', fogs_path %>
+      <%= link_to 'Edit', edit_fog_path(@fog) %> |
+      <%= link_to 'Back', fogs_path %>
+    </div>
+  </div>
+</div>

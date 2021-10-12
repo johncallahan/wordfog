@@ -89,6 +89,7 @@ Navigate to the dokku hosted app in a browser and then login with admin@example.
 * "Still processing" message on each fog picture that is nil
 * Problems with small input
 * Fix requiring "RMagick" is deprecated. Use "rmagick" instead
+* ~~Fix single column squeeze on fog edit form~~
 
 ## License
 

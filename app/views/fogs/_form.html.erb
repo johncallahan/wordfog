@@ -1,4 +1,4 @@
-<%= form_with(model: fog, local: true) do |form| %>
+<%= form_with(model: fog, html: {:class => 'row g-3' }, local: true) do |form| %>
   <% if fog.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(fog.errors.count, "error") %> prohibited this fog from being saved:</h2>
@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-outline">
+    <%= form.label :name, :class => 'form-label' %>
+    <%= form.text_field :name, :class => 'form-control' %>
   </div>
 
-  <div class="field">
-    <%= form.label :words %>
-    <%= form.text_area :words %>
+  <div class="form-outline">
+    <%= form.label :words, :class => 'form-label' %>
+    <%= form.text_area :words, :class => 'form-control' %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-outline">
+    <%= form.submit nil, :class => 'btn-primary', :style=>'color:#FFFFFF;' %>
   </div>
 <% end %>

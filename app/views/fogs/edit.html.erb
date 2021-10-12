@@ -1,6 +1,10 @@
-<h1>Editing Fog</h1>
-
-<%= render 'form', fog: @fog %>
-
-<%= link_to 'Show', @fog %> |
-<%= link_to 'Back', fogs_path %>
+<div class="container mt-4 border">
+  <div class="container-content">
+    <h1 class="m-3">Editing Fog</h1>
+    <div class="m-3">
+      <%= render 'form', fog: @fog %>
+      <%= link_to 'Show', @fog %> |
+      <%= link_to 'Back', fogs_path %>
+    </div>
+  </div>
+</div>
