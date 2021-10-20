@@ -315,6 +315,7 @@ Devise.setup do |config|
                     response_type: :code,
                     uid_field: "uid",
                     discovery: true,
+                    prompt: "none",
                     client_options: {
                       port: 443,
                       scheme: "https",
